@@ -1,0 +1,5 @@
+# ID2212-NetworkProgramming
+Distributed applications in Java
+This repository contains the programming excersices I did for ID2212 course at KTH - Royal Institute of Technology.
+##Description
+The course gives hands-on experience in writing distributed applications in Java. In particular, after completion of the course, students should be able to know and define architectures of distributed applications; to design GUI clients for network servers; to program concurrent threads in a Java application; to design, develop and implement a distributed application using different networking APIs and technologies in Java, e.g. the socket API, Java RMI, Java IDL (CORBA), Java Messaging Service (JMS), Java Database Connectivity (JDBC) and Java Persistence API (JPA); to develop Web-based applications in Java using the Enterprise Java technologies, e.g. as Enterprise JavaBeans (EJB), servlets, Java Server Faces (JSF); to develop applications for hand-held and embedded devices using the Android API and (tentatively) the Java Platform Micro Edition
