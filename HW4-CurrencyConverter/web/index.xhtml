@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Currency converter</title>
+    </h:head>
+    <h:body>
+        <h1>Welcome to the Currency converter</h1>
+        <h:form>
+            <h3>Add currency rates : 1.00, 0.91, 0.66, 121.43</h3>
+            <p>
+                <h:outputLabel for="usd" value="Usd: "/>
+                <h:inputText id="usd" value="#{converterManager.rateUSD}"/>
+                <h:outputLabel for="eur" value="Eur: "/>
+                <h:inputText id="eur" value="#{converterManager.rateEUR}"/>
+                <h:outputLabel for="gbp" value="GBP: "/>
+                <h:inputText id="gbp" value="#{converterManager.rateGBP}"/>
+                <h:outputLabel for="yen" value="Yen: "/>
+                <h:inputText id="yen" value="#{converterManager.rateYEN}"/>
+            </p>
+            <p>
+                <h:commandButton value="Save" action="#{converterManager.saveRates}"/>
+            </p>
+            <hr/>
+        </h:form>
+        <h:form>
+            <h3>Currency converter - usd - eur - gbp - yen</h3>
+            <p>
+                <h:outputLabel for="sourceCurrency" value="Source currency: "/>
+                <h:inputText id="sourceCurrency" value="#{converterManager.newSource}"/>
+                <h:outputLabel for="targetCurrency" value="Target currency: "/>
+                <h:inputText id="targetCurrency" value="#{converterManager.newTarget}"/>
+                <h:outputLabel for="amount" value="Amount: "/>
+                <h:inputText id="amount" value="#{converterManager.newSourceAmount}"/>
+            </p>
+            <p>
+                <h:commandButton value="Convert" action="#{converterManager.convertCurrency}"/>
+            </p>
+            <hr/>
+        </h:form>
+        <h3>Result</h3>
+        <p>
+            <h:outputLabel for="currResult" rendered="#{converterManager.newResultAmount != null}"  value="Result: "/>
+            <h:outputText id="currResult" value="#{converterManager.newResultAmount}"/>
+            <h:outputText rendered="#{converterManager.newResultAmount == null}"  value="No current result."/>
+        </p>
+        <hr/>
+    </h:body>
+</html>
+
